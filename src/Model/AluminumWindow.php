@@ -12,5 +12,6 @@ class AluminumWindow implements WindowInterface
     {
         $this->material = "Aluminum";
         $this->installed = 'No';
+        $this->color = "Aluminum color";
     }
 }
