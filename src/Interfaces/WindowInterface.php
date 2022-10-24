@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Saulius\Window\Interfaces;
 
-interface WindowInterface {
+interface WindowInterface
+{
     public function __construct();
 }

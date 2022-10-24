@@ -2,6 +2,7 @@
 
 namespace Saulius\Window\Client;
 
-class WindowShopping {
-    // public function 
+class WindowShopping
+{
+    // public function
 }
