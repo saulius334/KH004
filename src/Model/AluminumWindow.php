@@ -8,6 +8,6 @@ class AluminumWindow implements WindowInterface {
     public function __construct()
     {
         $this->material = "Aluminum";
-        $this->installed = false;
+        $this->installed = 'No';
     }
 }

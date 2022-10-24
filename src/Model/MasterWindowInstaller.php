@@ -2,20 +2,12 @@
 
 namespace Saulius\Window\Model;
 
-use Saulius\Window\Interfaces\WindowInstallerInterface;
+use Saulius\Window\Interfaces\InstallerAbstract;
 
-class MasterWindowInstaller implements WindowInstallerInterface {
-    public function __construct()
-    {
-        $this->name = "Aluminum window expert";
-        // aluminum
-    }
-    public function installWindow($window)
-    {
-        if ($window->material !== "Aluminum") {
-            return "Sorry, I don't know how to install this window...";
-        }
-        $window->installed = "yes";
-        return "I, " .$this->name . ", installed this " . $window->material . " window.";
+class MasterWindowInstaller extends InstallerAbstract 
+{
+    public function __construct($name,$workWith) {
+        $this->name = $workWith . " window " . $name;
+        $this->workWith = $workWith;
     }
 }

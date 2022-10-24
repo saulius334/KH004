@@ -8,6 +8,6 @@ class PlasticWindow implements WindowInterface {
     public function __construct()
     {
         $this->material = "Plastic";
-        $this->installed = false;
+        $this->installed = 'No';
     }
 }

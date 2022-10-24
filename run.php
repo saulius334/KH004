@@ -1,18 +1,22 @@
 <?php
 
-use Saulius\Window\Model\PlasticWindow;
-use Saulius\Window\Model\AluminumWindow;
-use Saulius\Window\Model\ExpertWindowInstaller;
-use Saulius\Window\Model\MasterWindowInstaller;
+use Saulius\Window\Factories\InstallerFactory;
+use Saulius\Window\Factories\WindowFactory;
 
 require __DIR__ . '/vendor/autoload.php';
 
+$windowFactory = new WindowFactory();
+$installerFactory = new InstallerFactory();
 
-$ALWindow = new AluminumWindow();
-$PVCWindow = new PlasticWindow();
-$master = new MasterWindowInstaller();
-$master->installWindow($ALWindow);
+$master = $installerFactory->callInstaller("Master");
+$expert = $installerFactory->callInstaller("Expert");
 
+$plastic = $windowFactory->createWindow('Plastic');
+$al = $windowFactory->createWindow('Aluminum');
 
-print_r($master->installWindow($ALWindow));
-// print_r($ALWindow);
+print_r($plastic);
+print_r($expert->installWindow($plastic));
+// $expert->paintWindow($plastic,'red');
+// print_r($expert->installWindow($al));
+print_r($plastic);
+// print_r($al);
