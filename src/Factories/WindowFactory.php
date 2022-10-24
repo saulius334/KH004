@@ -2,4 +2,11 @@
 
 declare(strict_types=1);
 
-namespace
+namespace Saulius\Window\Factories;
+
+class WindowFactory {
+    public function createWindow()
+    {
+        
+    }
+}

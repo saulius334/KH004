@@ -4,10 +4,10 @@ namespace Saulius\Window\Model;
 
 use Saulius\Window\Interfaces\WindowInterface;
 
-class Window implements WindowInterface {
-    public function __construct($material)
+class PlasticWindow implements WindowInterface {
+    public function __construct()
     {
-        $this->material = $material;
+        $this->material = "Plastic";
         $this->installed = false;
     }
 }

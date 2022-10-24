@@ -3,5 +3,5 @@
 namespace Saulius\Window\Interfaces;
 
 interface WindowInterface {
-    public function __construct($material);
+    public function __construct();
 }
