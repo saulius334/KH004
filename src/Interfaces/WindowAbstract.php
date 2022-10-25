@@ -8,15 +8,18 @@ use Saulius\Window\Interfaces\ProductInterface;
 
 abstract class WindowAbstract implements ProductInterface
 {
-    private $installed;
-    public function __construct()
+    public function __construct(private bool $installed = false)
     {
-        $this->installed = false;
+        $this->installed = $installed;
     }
     abstract public function getMaterial(): string;
     abstract public function description(): string;
-    public function isInstalled(): string
+    public function install(): void
     {
-        return $this->installed === true ? 'Yes' : 'No';
+        $this->installed = true;
+    }
+    public function isInstalled(): bool
+    {
+        return $this->installed;
     }
 }

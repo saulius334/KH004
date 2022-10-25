@@ -18,7 +18,7 @@ abstract class InstallerAbstract implements WindowInstallerInterface
         if ($window->getMaterial() !== $this->workWith()) {
             return "Sorry, I don't know how to install this window...";
         }
-        $window->installed = true;
+        $window->install();
         return "I, " . $this->getName() . ", installed this " . $window->getMaterial() . " window.";
     }
 }

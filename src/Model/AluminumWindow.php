@@ -14,7 +14,7 @@ class AluminumWindow extends WindowAbstract
     }
     public function description(): string
     {
-        if ($this->isInstalled() === 'Yes') {
+        if ($this->isInstalled() === true) {
             return 'I am ' . $this->getMaterial() . ' window. I was installed by Aluminum window expert.';
         } else {
             return 'I am ' . $this->getMaterial() . ' window.';
