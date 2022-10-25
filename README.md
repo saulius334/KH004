@@ -2,15 +2,6 @@
 
 ## Installation
 
-The kata uses:
-
-- [PHP 8.0+](https://www.php.net/downloads.php)
-- [Composer](https://getcomposer.org)
-
-Recommended:
-
-- [Git](https://git-scm.com/downloads)
-
 Clone the repository
 
 ```sh
