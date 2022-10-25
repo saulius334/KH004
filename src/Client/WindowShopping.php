@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Saulius\Window\Client;
 
 use Saulius\Window\Factories\WindowFactory;
