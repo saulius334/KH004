@@ -12,6 +12,12 @@ class AluminumWindow implements WindowInterface
     {
         $this->material = "Aluminum";
         $this->installed = 'No';
-        $this->color = "Aluminum color";
+    }
+    public function description(): string {
+        if ($this->installed === 'yes') {
+            return 'I am ' . $this->material . ' window. I was installed by Aluminum window master.';
+        } else {
+            return 'I am ' . $this->material . ' window.';
+        }
     }
 }

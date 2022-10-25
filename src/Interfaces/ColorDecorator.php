@@ -8,5 +8,9 @@ use Saulius\Window\Interfaces\WindowInterface;
 
 abstract class ColorDecorator implements WindowInterface
 {
-    abstract public function __construct();
+    public function __construct(public WindowInterface $window) {}
+    public function description(): string 
+    {
+        return $this->window->description();
+    }
 }

@@ -1,7 +1,8 @@
 <?php
 
-use Saulius\Window\Factories\InstallerFactory;
 use Saulius\Window\Factories\WindowFactory;
+use Saulius\Window\Factories\InstallerFactory;
+use Saulius\Window\Model\ColorDecorator\RedColor;
 
 require __DIR__ . '/vendor/autoload.php';
 
@@ -15,8 +16,8 @@ $plastic = $windowFactory->createWindow('Plastic');
 $al = $windowFactory->createWindow('Aluminum');
 
 print_r($plastic);
-print_r($expert->installWindow($plastic));
-// $expert->paintWindow($plastic,'red');
-// print_r($expert->installWindow($al));
-print_r($plastic);
+
+
+$redWindow = new RedColor($plastic);
+print_r($redWindow->description());
 // print_r($al);

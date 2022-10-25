@@ -8,7 +8,7 @@ use Saulius\Window\Interfaces\InstallerAbstract;
 
 class ExpertWindowInstaller extends InstallerAbstract
 {
-    public function __construct(private string $name, private string $workWith)
+    public function __construct(public string $name, public string $workWith)
     {
         $this->name = $workWith . " window " . $name;
         $this->workWith = $workWith;

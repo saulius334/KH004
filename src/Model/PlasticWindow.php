@@ -13,4 +13,11 @@ class PlasticWindow implements WindowInterface
         $this->material = "Plastic";
         $this->installed = 'No';
     }
+    public function description(): string {
+        if ($this->installed === 'yes') {
+            return 'I am ' . $this->material . ' window. I was installed by Plastic window expert.';
+        } else {
+            return 'I am ' . $this->material . ' window.';
+        }
+    }
 }
