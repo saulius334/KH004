@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 namespace Saulius\Window\Interfaces;
 
-use Saulius\Window\Interfaces\WindowInterface;
+use Saulius\Window\Interfaces\ProductInterface;
 
-abstract class ColorDecorator implements WindowInterface
+class ColorDecorator implements ProductInterface
 {
-    public function __construct(public WindowInterface $window) {}
-    public function description(): string 
+    public function __construct(private WindowAbstract $window)
+    {
+    }
+    public function getWindow()
+    {
+        return $this->window;
+    }
+    public function description(): string
     {
         return $this->window->description();
     }

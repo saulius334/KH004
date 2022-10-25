@@ -8,13 +8,17 @@ use Saulius\Window\Interfaces\WindowInstallerInterface;
 
 abstract class InstallerAbstract implements WindowInstallerInterface
 {
-    abstract public function __construct(string $name, string $workWith);
-    public function installWindow(WindowInterface $window): string
+    public function __construct()
     {
-        if ($window->material !== $this->workWith) {
+    }
+    abstract public function getName(): string;
+    abstract public function workWith(): string;
+    public function installWindow(WindowAbstract $window): string
+    {
+        if ($window->getMaterial() !== $this->workWith()) {
             return "Sorry, I don't know how to install this window...";
         }
-        $window->installed = "yes";
-        return "I, " . $this->name . ", installed this " . $window->material . " window.";
+        $window->installed = true;
+        return "I, " . $this->getName() . ", installed this " . $window->getMaterial() . " window.";
     }
 }

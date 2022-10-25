@@ -13,8 +13,8 @@ class InstallerFactory
     public function callInstaller(string $qualification): WindowInstallerInterface
     {
         return match ($qualification) {
-            'Expert' => new ExpertWindowInstaller($qualification, 'Plastic'),
-            'Master' => new MasterWindowInstaller($qualification, 'Aluminum')
+            'Expert' => new ExpertWindowInstaller(),
+            'Master' => new MasterWindowInstaller()
         };
     }
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Saulius\Window\Interfaces;
 
-interface WindowInterface
+interface ProductInterface
 {
     public function description(): string;
 }

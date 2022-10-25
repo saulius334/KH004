@@ -8,6 +8,7 @@ use Saulius\Window\Model\ColorDecorator\RedColor;
 use Saulius\Window\Model\ColorDecorator\BlueColor;
 
 require __DIR__ . '/../../vendor/autoload.php';
+
 $windowFactory = new WindowFactory();
 $installerFactory = new InstallerFactory();
 

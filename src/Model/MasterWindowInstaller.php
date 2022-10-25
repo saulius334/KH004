@@ -8,9 +8,12 @@ use Saulius\Window\Interfaces\InstallerAbstract;
 
 class MasterWindowInstaller extends InstallerAbstract
 {
-    public function __construct(public string $name, public string $workWith)
+    public function getName(): string
     {
-        $this->name = $workWith . " window " . $name;
-        $this->workWith = $workWith;
+        return "Aluminum window expert";
+    }
+    public function workWith(): string
+    {
+        return "Aluminum";
     }
 }

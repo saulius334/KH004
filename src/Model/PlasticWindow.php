@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Saulius\Window\Model;
 
-use Saulius\Window\Interfaces\WindowInterface;
+use Saulius\Window\Interfaces\WindowAbstract;
 
-class PlasticWindow implements WindowInterface
+class PlasticWindow extends WindowAbstract
 {
-    public function __construct()
+    public function getMaterial(): string
     {
-        $this->material = "Plastic";
-        $this->installed = 'No';
+        return 'Plastic';
     }
-    public function description(): string {
-        if ($this->installed === 'yes') {
-            return 'I am ' . $this->material . ' window. I was installed by Plastic window expert.';
+    public function description(): string
+    {
+        if ($this->isInstalled() === 'Yes') {
+            return 'I am ' . $this->getMaterial() . ' window. I was installed by Plastic window expert.';
         } else {
-            return 'I am ' . $this->material . ' window.';
+            return 'I am ' . $this->getMaterial() . ' window.';
         }
     }
 }

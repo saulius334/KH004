@@ -8,8 +8,8 @@ use Saulius\Window\Interfaces\ColorDecorator;
 
 class BlueColor extends ColorDecorator
 {
-    public function description(): string 
+    public function description(): string
     {
-        return $this->window->description() . ' im blue dabu dee dabu die';
+        return $this->getWindow()->description() . ' im blue dabu dee dabu die';
     }
 }

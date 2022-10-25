@@ -8,8 +8,8 @@ use Saulius\Window\Interfaces\ColorDecorator;
 
 class RedColor extends ColorDecorator
 {
-    public function description(): string 
+    public function description(): string
     {
-        return $this->window->description() . ' Also I am red color. Jelly ?';
+        return $this->getWindow()->description() . ' Also I am red color. Jelly ?';
     }
 }
