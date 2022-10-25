@@ -17,6 +17,6 @@ class ColorDecorator implements ProductInterface
     }
     public function description(): string
     {
-        return $this->window->description();
+        return $this->getWindow()->description();
     }
 }

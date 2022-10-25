@@ -4,8 +4,8 @@ namespace Saulius\Window\Client;
 
 use Saulius\Window\Factories\WindowFactory;
 use Saulius\Window\Factories\InstallerFactory;
-use Saulius\Window\Model\ColorDecorator\RedColor;
-use Saulius\Window\Model\ColorDecorator\BlueColor;
+use Saulius\Window\Models\ColorDecoratorModels\RedColor;
+use Saulius\Window\Models\ColorDecoratorModels\BlueColor;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
@@ -18,8 +18,8 @@ $expert = $installerFactory->callInstaller("Expert");
 $plastic = $windowFactory->createWindow('Plastic');
 $aluminum = $windowFactory->createWindow('Aluminum');
 
-print_r($plastic);
-print_r($aluminum);
+// print_r($plastic);
+// print_r($aluminum);
 print_r($expert->installWindow($plastic) . "\n");
 print_r($expert->installWindow($aluminum) . "\n");
 

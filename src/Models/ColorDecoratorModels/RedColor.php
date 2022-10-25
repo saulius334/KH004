@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saulius\Window\Model\ColorDecorator;
+namespace Saulius\Window\Models\ColorDecoratorModels;
 
 use Saulius\Window\Interfaces\ColorDecorator;
 

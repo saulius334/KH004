@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Saulius\Window\Factories;
 
 use Saulius\Window\Interfaces\WindowAbstract;
-use Saulius\Window\Model\PlasticWindow;
-use Saulius\Window\Model\AluminumWindow;
+use Saulius\Window\Models\WindowModels\PlasticWindow;
+use Saulius\Window\Models\WindowModels\AluminumWindow;
 
 class WindowFactory
 {

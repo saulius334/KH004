@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Saulius\Window\Factories;
 
 use Saulius\Window\Interfaces\WindowInstallerInterface;
-use Saulius\Window\Model\ExpertWindowInstaller;
-use Saulius\Window\Model\MasterWindowInstaller;
+use Saulius\Window\Models\InstallerModels\ExpertWindowInstaller;
+use Saulius\Window\Models\InstallerModels\MasterWindowInstaller;
 
 class InstallerFactory
 {

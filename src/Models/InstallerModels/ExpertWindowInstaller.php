@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Saulius\Window\Model;
+namespace Saulius\Window\Models\InstallerModels;
 
 use Saulius\Window\Interfaces\InstallerAbstract;
 

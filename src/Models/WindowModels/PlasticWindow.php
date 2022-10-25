@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Saulius\Window\Model;
+namespace Saulius\Window\Models\WindowModels;
 
 use Saulius\Window\Interfaces\WindowAbstract;
 
-class AluminumWindow extends WindowAbstract
+class PlasticWindow extends WindowAbstract
 {
     public function getMaterial(): string
     {
-        return 'Aluminum';
+        return 'Plastic';
     }
     public function description(): string
     {
-        if ($this->isInstalled() === true) {
-            return 'I am ' . $this->getMaterial() . ' window. I was installed by Aluminum window expert.';
+        if ($this->isInstalled() === 'Yes') {
+            return 'I am ' . $this->getMaterial() . ' window. I was installed by Plastic window expert.';
         } else {
             return 'I am ' . $this->getMaterial() . ' window.';
         }
